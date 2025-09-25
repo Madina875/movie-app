@@ -19,7 +19,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
         <Provider store={store}>
           <Suspense
             fallback={
-              <div className="flex items-center justify-center text-2xl ">
+              <div className="flex items-center justify-center text-2xl mt-50 ">
                 Loading...
               </div>
             }
