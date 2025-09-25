@@ -6,10 +6,10 @@ import { store } from "../store";
 
 const client = new QueryClient({
   defaultOptions: {
-    queries:{
-      refetchOnWindowFocus: false
-    }
-  }
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
 });
 
 const AppProvider = ({ children }: { children: ReactNode }) => {
@@ -17,7 +17,13 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     <BrowserRouter>
       <QueryClientProvider client={client}>
         <Provider store={store}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center text-2xl ">
+                Loading...
+              </div>
+            }
+          >
             {children}
           </Suspense>
         </Provider>
