@@ -57,7 +57,7 @@ body {
 
 .mySwiper2 {
   height: 60%;
-  width: 90%;
+  width: 80%;
   border-radius: 20px;
 }
 .swiper::-webkit-scrollbar {
@@ -66,8 +66,8 @@ body {
 
 .mySwiper {
   overflow: auto;
-  height: 10%;
-  width: 50%;
+  height: 5%;
+  width: 40%;
   box-sizing: border-box;
   padding: 10px 0;
 }

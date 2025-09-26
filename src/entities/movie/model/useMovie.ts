@@ -4,6 +4,7 @@ import {
   fetchMovieById,
   fetchMovieInfo,
   fetchMovieReview,
+  fetchMovieGenre,
 } from "../api/fetchApi";
 import type { IMovieParams } from "./types";
 
@@ -24,6 +25,12 @@ export const useMovie = () => {
       queryFn: () => fetchMovieById(id),
     });
 
+  const getMovieGenreList = () =>
+    useQuery({
+      queryKey: ["movieKey"],
+      queryFn: () => fetchMovieGenre(),
+    });
+
   const getMovieInfo = (id: string, path: string) =>
     useQuery({
       queryKey: ["movieKey", id, path],
@@ -36,5 +43,11 @@ export const useMovie = () => {
       queryFn: () => fetchMovieReview(id, path),
     });
 
-  return { getMovies, getMovieById, getMovieInfo, getMovieReview };
+  return {
+    getMovies,
+    getMovieById,
+    getMovieInfo,
+    getMovieReview,
+    getMovieGenreList,
+  };
 };
