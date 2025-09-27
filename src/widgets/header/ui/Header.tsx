@@ -7,7 +7,7 @@ import { MenuHeader } from "./MenuHeader";
 export const Header = memo(() => {
   return (
     <header>
-      <nav className="container relative flex justify-between items-center h-20">
+      <nav className="container relative flex  justify-center items-center h-20">
         <Logo />
         <MenuHeader />
         <Navigation />

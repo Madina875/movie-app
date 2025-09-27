@@ -9,17 +9,14 @@ export const MenuHeader = memo(() => {
   const [show, setShow] = useState(false);
   return (
     <div className="flex flex-col w-full">
-      <button
-        onClick={() => setShow((p) => !p)}
-        className="lg:hidden ml-5 md:hidden"
-      >
+      <button onClick={() => setShow((p) => !p)} className="lg:hidden ml-5">
         <IoIosArrowDown />
       </button>
 
       <ul
         className={
           show
-            ? "flex-col sm:absolute z-30 top-20 left-[-2px] bg-black/80 w-full sm:bg-pink h-[200px] gap-6 text-[13px] pl-27"
+            ? "flex-col lg:hidden absolute z-30 top-20 left-[-2px] bg-black/80 w-full sm:bg-pink h-[200px] gap-6 text-[13px] pl-27"
             : "hidden"
         }
       >

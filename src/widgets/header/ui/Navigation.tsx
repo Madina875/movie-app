@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navigation = memo(() => {
   return (
-    <ul className="md:flex hidden gap-6 text-[13px] pr-70">
+    <ul className="lg:flex hidden gap-6 text-[13px] pr-70">
       <li className="flex flex-col items-center">
         <NavLink
           to={"/"}
