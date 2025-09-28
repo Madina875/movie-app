@@ -1,13 +1,15 @@
 import { useMovie } from "@/entities/movie";
 import { MovieList } from "@/widgets/movie-list";
-import { memo } from "react";
+import { memo, useState } from "react";
 import { Hero } from "../../../widgets/hero";
 import { IoIosArrowForward } from "react-icons/io";
+import { ChargerButton } from "../../../features/charger-button";
 
 export const Home = memo(() => {
   const { getMovies } = useMovie();
+  const [showBattery, setShowBattery] = useState(false);
   const { data } = getMovies();
-
+  console.log(showBattery);
   return (
     <div>
       <Hero />
@@ -17,7 +19,11 @@ export const Home = memo(() => {
           show all <IoIosArrowForward />
         </p>
       </div>
-      <MovieList movies={data?.results?.slice(0, 8)} />
+      <MovieList movies={data?.results?.slice(0, 10)} />
+
+      <div onClick={() => setShowBattery(!showBattery)}>
+        <ChargerButton />
+      </div>
     </div>
   );
 });
