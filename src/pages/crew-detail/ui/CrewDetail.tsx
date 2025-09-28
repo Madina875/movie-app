@@ -7,10 +7,12 @@ export const CrewDetail = memo(() => {
   const { id } = useParams();
   const { getCrewsMoviesById } = useCrew();
   const { data: movies } = getCrewsMoviesById(id as string);
-  console.log(movies?.cast);
   return (
     <div>
       <CrewView />
+      <h2 className="container text-3xl capitalize mb-10">
+        Played in movies like :
+      </h2>
       <MovieList movies={movies?.cast} />
     </div>
   );
