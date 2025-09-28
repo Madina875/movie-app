@@ -46,3 +46,7 @@ html {
   color: white;
   border-radius: 50px;
 }
+
+.paginationmovie.movie {
+  background-color: antiquewhite;
+}

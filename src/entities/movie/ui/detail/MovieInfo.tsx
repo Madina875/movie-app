@@ -3,6 +3,8 @@ import { useMovie } from "../../model/useMovie";
 import { createImageUrl } from "@/shared/utils";
 import { Image } from "antd";
 import { Link, Outlet } from "react-router-dom";
+import { FaStar, FaStarOfDavid } from "react-icons/fa";
+import { MovieTrailer } from "../../../../features/movie-trailer";
 
 interface Props {
   id: string;
@@ -15,25 +17,50 @@ export const MovieInfo: FC<Props> = memo((props) => {
   const { data: imageData } = getMovieInfo(id, "images");
   return (
     <div>
-      <section>
-        <img src={createImageUrl(data?.backdrop_path)} alt="" />
+      <section className="relative ">
+        <img
+          src={createImageUrl(data?.backdrop_path)}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
       </section>
 
-      <section className="container mb-10 flex gap-20 my-20">
-        <div className="flex-1  object-center object-cover">
-          <img src={createImageUrl(data?.poster_path)} alt="" />
+      <section className=" pr-100 container mb-10 flex gap-20 my-20 mt-30">
+        <div className=" object-center object-cover mb-20">
+          <img
+            className="h-150 object-cover"
+            src={createImageUrl(data?.poster_path)}
+            alt=""
+          />
         </div>
 
-        <div className="flex-1">
-          <h1 className="text-3xl">{data?.title}</h1>
-          <p>{data?.budget?.toLocaleString()} USD</p>
-          <a href={data?.homepage} target="_blank">
-            Link
+        <div className="">
+          <h1 className="text-4xl mb-5 mt-5">{data?.title}</h1>
+          <div className="flex flex-col gap-2">
+            <strong className="flex">
+              popularity : {data?.popularity} <FaStar />
+            </strong>
+            <p>original title : {data?.original_title}</p>
+            <p>budget: {data?.budget?.toLocaleString()} USD</p>
+            <p>origin country : {data?.origin_country}</p>
+            <p>original language : {data?.original_language}</p>
+            <p>release date : {data?.release_date}</p>
+            <p>status : {data?.status}</p>
+            <p>vote_count : {data?.vote_count}</p>
+          </div>
+
+          <a
+            className="underline text-red-500"
+            href={data?.homepage}
+            target="_blank"
+          >
+            moviepage
           </a>
         </div>
       </section>
 
-      <section className="flex overflow-x-scroll scrollbar-hide container mb-30">
+      <section className="flex overflow-x-scroll scrollbar-hide max-h-30 container mb-30">
         {imageData?.backdrops?.slice(0, 20)?.map((item: any, inx: number) => (
           <Image
             key={inx}
@@ -42,6 +69,10 @@ export const MovieInfo: FC<Props> = memo((props) => {
             alt=""
           />
         ))}
+      </section>
+
+      <section className="container">
+        <MovieTrailer title={data?.title} />
       </section>
 
       <section className="container my-10">

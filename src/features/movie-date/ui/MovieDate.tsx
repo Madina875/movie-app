@@ -18,8 +18,18 @@ export const MovieDate = memo(() => {
   return (
     <div>
       <Space direction="horizontal">
-        <DatePicker onChange={onChangeStart} />
-        <DatePicker onChange={onChangeEnd} />
+        <DatePicker
+          style={{
+            width: 150,
+          }}
+          onChange={onChangeStart}
+        />
+        <DatePicker
+          style={{
+            width: 150,
+          }}
+          onChange={onChangeEnd}
+        />
       </Space>
     </div>
   );

@@ -19,6 +19,9 @@ export const MovieSort = memo(() => {
         { value: "vote_average.asc", label: "Vote -" },
         { value: "vote_average.desc", label: "Vote +" },
       ]}
+      style={{
+        width: 150,
+      }}
     />
   );
 });

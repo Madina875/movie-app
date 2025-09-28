@@ -17,6 +17,9 @@ export const MovieCategory = memo(() => {
       onChange={handleChange}
       className="w-60"
       placeholder="Sort by"
+      style={{
+        width: 150,
+      }}
       options={data?.genres.map((e: any) => ({
         value: e.id,
         label: e.name,
