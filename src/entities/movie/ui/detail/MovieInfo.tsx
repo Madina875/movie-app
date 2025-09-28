@@ -3,7 +3,7 @@ import { useMovie } from "../../model/useMovie";
 import { createImageUrl } from "@/shared/utils";
 import { Image } from "antd";
 import { Link, Outlet } from "react-router-dom";
-import { FaStar, FaStarOfDavid } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { MovieTrailer } from "../../../../features/movie-trailer";
 
 interface Props {
