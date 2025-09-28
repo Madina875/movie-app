@@ -14,11 +14,18 @@ export const Movie = memo(() => {
   const sort_by = searchParams.get("sort") ?? "popularity.desc";
   const with_genres = searchParams.get("with_genres") ?? "80";
 
-  const { data } = getMovies({
-    page: page as string,
-    sort_by: sort_by as string,
-    with_genres: with_genres as string,
-  });
+  const dateFrom = searchParams.get("primary_release_date.gte") || undefined;
+  const dateTo = searchParams.get("primary_release_date.lte") || undefined;
+
+  const params = {
+    page,
+    sort_by,
+    with_genres,
+    ...(dateFrom && { "primary_release_date.gte": dateFrom }),
+    ...(dateTo && { "primary_release_date.lte": dateTo }),
+  };
+
+  const { data } = getMovies(params);
 
   return (
     <div>

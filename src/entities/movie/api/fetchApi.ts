@@ -22,7 +22,6 @@ export const fetchMovieGenre = async () => {
   const response = await api.get(`genre/movie/list`);
   return response.data;
 };
-
 export const fetchMovieInfo = async (id: string, path: string) => {
   const response = await api.get(`/movie/${id}/${path}`);
   return response.data;

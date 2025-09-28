@@ -29,12 +29,7 @@ export const MovieCard: FC<Props> = memo((props) => {
           <BiStar className="text-red-500" />
         </p>
 
-        <div className="flex gap-2 line-clamp-2">
-          {movie?.genre_ids.map((e: string, inx: any) => (
-            <p key={inx}>{e}</p>
-          ))}
-        </div>
-        {/* <strong>date: {movie.release_date.split("-")[0]}</strong> */}
+        <strong>date: {movie.release_date}</strong>
       </div>
     </div>
   );
