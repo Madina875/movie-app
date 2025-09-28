@@ -1,0 +1,21 @@
+{
+  "greeting": "Hello world",
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "movies": "Movies",
+      "search": "Search",
+      "ticket": "Ticket"
+    }
+  },
+  "button": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "loading": "Loading",
+    "edit": "Edit",
+    "send": "Send",
+    "update": "Update",
+    "delete": "Delete",
+    "save": "Save"
+  }
+}

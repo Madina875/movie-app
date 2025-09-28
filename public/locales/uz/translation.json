@@ -1,20 +1,21 @@
 {
-  "greeting": "Privet mir",
+  "greeting": "Salom dunyo",
   "header": {
     "navigation": {
-      "home": "Home ru",
-      "movies": "Movies ru",
-      "search": "Search ru"
+      "home": "Bosh sahifa",
+      "movies": "Filmlar",
+      "search": "Qidirish",
+      "ticket": "Chiptalar"
     }
   },
   "button": {
-    "submit": "submit",
-    "cancel": "cancel",
-    "loading": "loading",
-    "edit": "edit",
-    "send": "send",
-    "update": "update",
-    "delete": "delete",
-    "save": "save"
+    "submit": "Yuborish",
+    "cancel": "Bekor qilish",
+    "loading": "Yuklanmoqda",
+    "edit": "Tahrirlash",
+    "send": "Jo'natish",
+    "update": "Yangilash",
+    "delete": "O'chirish",
+    "save": "Saqlash"
   }
 }

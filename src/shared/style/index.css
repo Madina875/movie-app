@@ -23,3 +23,13 @@ html {
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.lang-select .ant-select-selector {
+  background-color: black !important;
+  color: white;
+  border-radius: 9999px;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
