@@ -12,8 +12,11 @@ export const MovieCard: FC<Props> = memo((props) => {
   const { movie } = props;
   const navigate = useNavigate();
   return (
-    <div className="text-white">
-      <div className="min-h-100" onClick={() => navigate(`/movie/${movie.id}`)}>
+    <div className="text-white bg-gray-950 min-h-120">
+      <div
+        className="min-h-100 "
+        onClick={() => navigate(`/movie/${movie.id}`)}
+      >
         <img
           src={createImageUrl(movie.poster_path)}
           className="rounded-[10px] cursor-pointer"
@@ -24,12 +27,15 @@ export const MovieCard: FC<Props> = memo((props) => {
         <h3 className="line-clamp-1 text-2xl" title={movie.title}>
           {movie.title}
         </h3>
-        <p className="flex items-center gap-2">
-          {movie.vote_average}
-          <BiStar className="text-red-500" />
-        </p>
-
-        <strong>date: {movie.release_date}</strong>
+        <div className="flex justify-between items-center mt-5">
+          <p className="flex items-center gap-2">
+            {movie.vote_average}
+            <BiStar className="text-red-500" />
+          </p>
+          <strong className="text-gray-600 font-normal text-[18px]">
+            {movie.release_date}
+          </strong>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .container {
-  max-width: 1204px;
+  max-width: 1510px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;

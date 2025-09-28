@@ -11,13 +11,13 @@ export const Home = memo(() => {
   return (
     <div>
       <Hero />
-      <div className="container my-10 flex justify-between">
+      <div className="container my-5 text-[18px] flex justify-between">
         <p>In week</p>
         <p className="cursor-pointer flex items-center gap-2 text-red-600">
           show all <IoIosArrowForward />
         </p>
       </div>
-      <MovieList movies={data?.results?.slice(0, 4)} />
+      <MovieList movies={data?.results?.slice(0, 8)} />
     </div>
   );
 });

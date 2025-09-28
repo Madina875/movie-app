@@ -12,16 +12,13 @@ export const MovieSort = memo(() => {
   return (
     <Select
       onChange={handleChange}
-      className="w-60"
-      placeholder="Sort by"
+      className="w-50 bg-gray-800 text-white border-gray-700"
+      placeholder="All"
       options={[
-        { value: "popularity.desc", label: "Popuplar" },
-        { value: "vote_average.asc", label: "Vote -" },
-        { value: "vote_average.desc", label: "Vote +" },
+        { value: "popularity.desc", label: "popular" },
+        { value: "vote_average.asc", label: "sort by asc" },
+        { value: "vote_average.desc", label: "sort by desc" },
       ]}
-      style={{
-        width: 150,
-      }}
     />
   );
 });
