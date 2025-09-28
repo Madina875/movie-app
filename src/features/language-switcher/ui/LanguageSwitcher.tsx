@@ -1,11 +1,14 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 
 export const LanguageSwitcher = memo(() => {
+  const { i18n } = useTranslation();
+
   return (
-    <select className=" bg-gray-950 p-2 rounded-[10px]">
-      <option value="">uz</option>
-      <option value="">en</option>
-      <option value="">ru</option>
+    <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
+      <option value="uz">uz</option>
+      <option value="en">en</option>
+      <option value="ru">ru</option>
     </select>
   );
 });

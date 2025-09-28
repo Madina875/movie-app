@@ -5,6 +5,7 @@ import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { MovieSort } from "../../../features/movie-sort";
 import { MovieCategory } from "../../../features/movie-category";
+import { MovieDate } from "../../../features/movie-date";
 
 export const Movie = memo(() => {
   const { getMovies } = useMovie();
@@ -25,6 +26,7 @@ export const Movie = memo(() => {
         <h2>Total: {data?.total_results?.toLocaleString()}</h2>
         <MovieSort />
         <MovieCategory />
+        <MovieDate />
       </div>
       <MovieList movies={data?.results} />
       <MoviePagination page={page} total_pages={data?.total_results} />

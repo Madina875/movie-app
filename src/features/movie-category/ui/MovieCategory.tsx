@@ -7,12 +7,10 @@ export const MovieCategory = memo(() => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { getMovieGenreList } = useMovie();
   const { data } = getMovieGenreList();
-  console.log(data?.genres);
 
   const handleChange = (value: string) => {
     searchParams.set("with_genres", value);
     setSearchParams(searchParams);
-    console.log(value);
   };
   return (
     <Select
