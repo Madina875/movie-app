@@ -19,15 +19,15 @@ export const MovieDate = memo(() => {
     <div>
       <Space direction="horizontal">
         <DatePicker
-          style={{
-            width: 150,
-          }}
+          className="sorting"
+          popupClassName="sorting-dropdown"
+          style={{ width: 150 }}
           onChange={onChangeStart}
         />
         <DatePicker
-          style={{
-            width: 150,
-          }}
+          className="sorting"
+          popupClassName="sorting-dropdown"
+          style={{ width: 150 }}
           onChange={onChangeEnd}
         />
       </Space>

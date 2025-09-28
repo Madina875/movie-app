@@ -12,7 +12,7 @@ export const MovieSort = memo(() => {
   return (
     <Select
       onChange={handleChange}
-      className="w-50 bg-gray-800 text-white border-gray-700"
+      className="sorting w-50 bg-gray-800 text-white border-gray-700"
       placeholder="All"
       options={[
         { value: "popularity.desc", label: "popular" },

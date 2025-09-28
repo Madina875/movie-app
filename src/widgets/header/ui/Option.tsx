@@ -7,8 +7,8 @@ export const Option = memo(() => {
   return (
     <div className="flex gap-2 items-center">
       <LanguageSwitcher />
-      <LoginBtn />
       <ThemeChanger />
+      <LoginBtn />
     </div>
   );
 });

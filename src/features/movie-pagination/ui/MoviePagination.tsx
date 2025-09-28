@@ -18,7 +18,7 @@ export const MoviePagination: FC<Props> = memo((props) => {
   return (
     <div className="py-10 flex justify-center">
       <Pagination
-        className="paginationmovie"
+        className="sorting paginationmovie"
         current={Number(page)}
         onChange={onChange}
         total={total_pages > 10000 ? 10000 : total_pages}

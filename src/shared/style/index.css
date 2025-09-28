@@ -50,3 +50,40 @@ html {
 .paginationmovie.movie {
   background-color: antiquewhite;
 }
+
+.sorting .ant-select-selector {
+  background: rgb(45, 43, 43) !important;
+  color: white !important;
+  border: 1px solid #aba8a8 !important;
+}
+
+.sorting .ant-select-arrow {
+  color: white !important;
+}
+
+.sorting .ant-select-dropdown {
+  background: rgb(13, 13, 13) !important;
+  color: white !important;
+}
+
+/* ✅ Pagination */
+.sorting .ant-pagination-item {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151 !important;
+}
+
+.sorting .ant-pagination-item a {
+  color: #ffffff !important;
+}
+
+.sorting .ant-pagination-item-active {
+  background-color: #374151 !important;
+  border-color: #374151 !important;
+}
+
+.sorting .ant-pagination-prev .ant-pagination-item-link,
+.sorting .ant-pagination-next .ant-pagination-item-link {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  border-color: #374151 !important;
+}

@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 export const Navigation = memo(() => {
   const { t } = useTranslation();
   return (
-    <ul className="lg:flex hidden gap-6 text-[13px] whitespace-nowrap pr-60">
+    <ul className="lg:flex hidden gap-6 text-[13px] whitespace-nowrap pr-90">
       <li className="flex flex-col items-center">
         <NavLink
           to={"/"}

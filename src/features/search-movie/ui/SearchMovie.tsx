@@ -30,7 +30,7 @@ export const SearchMovie = memo(() => {
   return (
     <div className="mb-20 min-h-100">
       <div className="container">
-        <div className="my-10 w-full">
+        <div className="my-10 w-full items-center justify-center">
           <Space direction="vertical">
             <Search
               className="searchinp"
@@ -44,7 +44,7 @@ export const SearchMovie = memo(() => {
         </div>
       </div>
       <MovieList movies={data?.results} />
-      {!data?.results?.length && debounceValue && !isFetching && <Empty/>}
+      {!data?.results?.length && debounceValue && !isFetching && <Empty />}
     </div>
   );
 });

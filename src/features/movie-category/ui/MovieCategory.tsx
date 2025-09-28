@@ -15,7 +15,7 @@ export const MovieCategory = memo(() => {
   return (
     <Select
       onChange={handleChange}
-      className="w-60"
+      className="sorting"
       placeholder="Sort by"
       style={{
         width: 150,
