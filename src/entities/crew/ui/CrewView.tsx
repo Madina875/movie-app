@@ -14,9 +14,14 @@ export const CrewView = memo(() => {
 
   return (
     <div className="container">
-      <section className="grid grid-cols-2 my-10 mb-30">
+      <section className="md:grid md:grid-cols-2 gap-10 md:my-10 flex flex-col mb-30">
         <div>
-          <img src={createImageUrl(data?.profile_path)} width={400} alt="" />
+          <img
+            className="w-full"
+            src={createImageUrl(data?.profile_path)}
+            width={400}
+            alt=""
+          />
         </div>
         <div className="pt-10">
           <h1 className="text-3xl mb-5">{data?.name}</h1>

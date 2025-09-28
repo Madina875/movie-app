@@ -17,7 +17,7 @@ export const MovieInfo: FC<Props> = memo((props) => {
   const { data: imageData } = getMovieInfo(id, "images");
   return (
     <div>
-      <section className="relative ">
+      <section className="relative">
         <img
           src={createImageUrl(data?.backdrop_path)}
           alt=""
@@ -26,16 +26,16 @@ export const MovieInfo: FC<Props> = memo((props) => {
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
       </section>
 
-      <section className=" pr-100 container mb-10 flex gap-20 my-20 mt-30">
+      <section className="flex flex-col md:flex-row  flex-1 pr-100 container mb-10 gap-20 my-20 mt-30">
         <div className=" object-center object-cover mb-20">
           <img
-            className="h-150 object-cover"
+            className="h-150 w-100% w-full object-cover md:w-70 lg:w-full"
             src={createImageUrl(data?.poster_path)}
             alt=""
           />
         </div>
 
-        <div className="">
+        <div className="flex-2">
           <h1 className="text-4xl mb-5 mt-5">{data?.title}</h1>
           <div className="flex flex-col gap-2">
             <strong className="flex">
