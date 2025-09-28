@@ -8,6 +8,7 @@ import CrewDetail from "../../pages/crew-detail";
 const Home = lazy(() => import("@/pages/home"));
 const Search = lazy(() => import("@/pages/search"));
 const Movie = lazy(() => import("@/pages/movie"));
+const Tickets = lazy(() => import("@/pages/tickets"));
 const MovieDetail = lazy(() => import("@/pages/movie-detail"));
 
 const AppRouter = () => {
@@ -19,6 +20,7 @@ const AppRouter = () => {
         { path: "", element: <Home /> },
         { path: "/movie", element: <Movie /> },
         { path: "/search", element: <Search /> },
+        { path: "/tickets", element: <Tickets /> },
         { path: "*", element: <div>NotFound</div> },
         {
           path: "/movie/:id",

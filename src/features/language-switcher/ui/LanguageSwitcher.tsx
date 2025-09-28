@@ -44,7 +44,6 @@ export const LanguageSwitcher = memo(() => {
       onChange={handleChange}
       options={languageOptions}
       className="lang-select"
-      dropdownStyle={{ borderRadius: "12px" }}
       style={{
         width: 60,
         borderRadius: "9999px",

@@ -33,3 +33,16 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+.searchinp .ant-input {
+  background-color: #000;
+  color: white;
+  border-radius: 50px;
+  width: 300px;
+}
+
+.searchinp .ant-input-search-button {
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 50px;
+}
