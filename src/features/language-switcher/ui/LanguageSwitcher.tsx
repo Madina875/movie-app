@@ -14,24 +14,27 @@ export const LanguageSwitcher = memo(() => {
     {
       value: "uz",
       label: (
-        <span className="flex items-center">
+        <span className="flex items-center gap-2">
           <ReactCountryFlag countryCode="UZ" svg />
+          Uz
         </span>
       ),
     },
     {
       value: "en",
       label: (
-        <span className="flex items-center">
+        <span className="flex items-center gap-2">
           <ReactCountryFlag countryCode="GB" svg />
+          Eng
         </span>
       ),
     },
     {
       value: "ru",
       label: (
-        <span className="flex items-center">
+        <span className="flex items-center gap-2">
           <ReactCountryFlag countryCode="RU" svg />
+          Ru
         </span>
       ),
     },
@@ -45,7 +48,7 @@ export const LanguageSwitcher = memo(() => {
       options={languageOptions}
       className="lang-select"
       style={{
-        width: 60,
+        width: 77,
         borderRadius: "9999px",
         height: 33,
         display: "flex",
