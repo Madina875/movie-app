@@ -7,6 +7,7 @@ import { MovieSort } from "../../../features/movie-sort";
 import { MovieCategory } from "../../../features/movie-category";
 import { MovieDate } from "../../../features/movie-date";
 import { IoIosArrowForward } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 export const Movie = memo(() => {
   const { getMovies } = useMovie();
@@ -15,6 +16,7 @@ export const Movie = memo(() => {
   const sort_by = searchParams.get("sort") ?? "popularity.desc";
   const with_genres = searchParams.get("with_genres") ?? "16";
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const dateFrom = searchParams.get("primary_release_date.gte") || undefined;
   const dateTo = searchParams.get("primary_release_date.lte") || undefined;
@@ -40,12 +42,12 @@ export const Movie = memo(() => {
         </div>
       </div>
       <div className="container my-10 flex justify-between">
-        <p>In week</p>
+        <p>{t("greeting.prodtime")}</p>
         <p
           onClick={() => navigate("/movie")}
           className="cursor-pointer flex items-center gap-2 text-red-600"
         >
-          show all <IoIosArrowForward />
+          {t("greeting.show")} <IoIosArrowForward />
         </p>
       </div>
       <MovieList movies={data?.results} />

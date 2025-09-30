@@ -1,5 +1,8 @@
 {
-  "greeting": "Salom dunyo",
+  "greeting": {
+    "prodtime": "hafta davomida",
+    "show": "barchasini ko'rish"
+  },
   "header": {
     "navigation": {
       "home": "Bosh sahifa",
@@ -16,6 +19,7 @@
     "send": "Jo'natish",
     "update": "Yangilash",
     "delete": "O'chirish",
-    "save": "Saqlash"
+    "save": "Saqlash",
+    "login": "Kirish"
   }
 }
