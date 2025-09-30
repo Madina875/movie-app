@@ -19,17 +19,17 @@ export const MovieCard: FC<Props> = memo((props) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="text-white bg-gray-950 min-h-120">
-      <div className="min-h-100 relative">
+    <div className="text-white bg-gray-950 flex flex-col gap-1">
+      <div className="relative">
         <img
           src={createImageUrl(movie.poster_path)}
-          className="rounded-[10px]  cursor-pointer"
+          className="rounded-[10px] object-center object-cover cursor-pointer"
           onClick={() => navigate(`/movie/${movie.id}`)}
           alt=""
         />
         <div
           onClick={() => dispatch(toggleLike(movie))}
-          className="top-2 left-[88%] rounded absolute text-4xl bg-gray-950"
+          className="top-2 lg:left-[85%] rounded absolute text-4xl bg-gray-950"
         >
           {carts.some((pro) => pro.id === movie.id) ? (
             <CiBookmark className="text-gray-600 hover:bg-red-900 cursor-pointer" />
