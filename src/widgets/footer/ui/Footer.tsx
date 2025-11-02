@@ -14,7 +14,11 @@ export const Footer = memo(() => {
     <footer className="w-full h-50 lg:min-h-[220px] pb-10 lg:px-40">
       <div className="container mx-100 flex bg-[#111111] rounded-[20px] justify-center lg:flex-row flex-col gap-45 py-10 text-white">
         <div className="flex gap-2 flex-col">
-          <img className="mb-10 size-15" src={img1} alt="" />
+          <img
+            className="mb-10 size-15 transition-transform duration-300 hover:scale-125"
+            src={img1}
+            alt=""
+          />
           <img className="object-center object-cover" src={img2} alt="" />
           <img className="object-center object-cover" src={img3} alt="" />
         </div>
@@ -64,14 +68,17 @@ export const Footer = memo(() => {
         </div>
         <div className="flex flex-col gap-2">
           <h4 className="font-semibold text-[15px] mb-3">Связаться с нами</h4>
-          <p className="mb-8 justify-start text-[20px] font-normal text-red-600">
+          <p className=" mb-8 justify-start text-[20px] font-normal text-red-600">
             +998 (95) 897-33-38
           </p>
           <p className="mb-1">Социальные сети:</p>
           <div className="flex text-red-600 text-2xl gap-4">
-            <FaInstagram />
-            <FaFacebook />
-            <FaYoutube />
+            {[FaInstagram, FaFacebook, FaYoutube].map((Icon, i) => (
+              <Icon
+                key={i}
+                className="cursor-pointer transition-transform duration-300 hover:scale-125 hover:text-red-700"
+              />
+            ))}
           </div>
         </div>
       </div>

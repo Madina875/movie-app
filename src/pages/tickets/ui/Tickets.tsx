@@ -9,7 +9,7 @@ export const Tickets = memo(() => {
 
   return (
     <div className="container grid grid-cols-5 gap-5 my-10">
-      {carts.length ? (
+      {carts && carts.length > 0 ? (
         carts?.map((item: IMovie) => <MovieCard key={item.id} movie={item} />)
       ) : (
         <div className="flex pl-180 items-center justify-center">

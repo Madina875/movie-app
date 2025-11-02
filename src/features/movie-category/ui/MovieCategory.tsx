@@ -15,10 +15,12 @@ export const MovieCategory = memo(() => {
   return (
     <Select
       onChange={handleChange}
-      className="sorting"
+      className="rounded-md"
       placeholder="Sort by"
       style={{
-        width: 150,
+        width: 200,
+        backgroundColor: "#1f2937",
+        color: "white",
       }}
       options={data?.genres.map((e: any) => ({
         value: e.id,

@@ -5,6 +5,7 @@ import { Hero } from "../../../widgets/hero";
 import { IoIosArrowForward } from "react-icons/io";
 import { ChargerButton } from "../../../features/charger-button";
 import { useTranslation } from "react-i18next";
+import { ScrollUp } from "../../../features/scroll-up";
 
 export const Home = memo(() => {
   const { getMovies } = useMovie();
@@ -25,6 +26,10 @@ export const Home = memo(() => {
 
       <div onClick={() => setShowBattery(!showBattery)}>
         <ChargerButton />
+      </div>
+
+      <div className=" z-20 fixed bottom-25 right-10">
+        <ScrollUp />
       </div>
     </div>
   );

@@ -39,12 +39,12 @@ export const Navigation = memo(() => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "text-red-600"
+              ? "text-red-600 relative"
               : "relative text-gray-300 hover:text-white"
           }
           to={"/tickets"}
         >
-          <HiTicket className="size-5 mb-1 m-auto" />
+          <HiTicket className="size-5 mb-1  m-auto" />
           <span>{t("header.navigation.ticket")}</span>
           {!!cart.length && (
             <div className="absolute top-1 right-1 w-4 h-4 flex items-center justify-center bg-red-900 rounded-full text-white text-xs ml-[2px]">
