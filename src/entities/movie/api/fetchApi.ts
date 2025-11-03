@@ -31,3 +31,15 @@ export const fetchMovieReview = async (id: string, path: string) => {
   const response = await api.get(`/movie/${id}/${path}`);
   return response.data;
 };
+
+import axios from "axios";
+
+const BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = import.meta.env.VITE_TMDB_KEY; // or your TMDB key
+
+export const fetchMovieTrailer = async (id: string) => {
+  const res = await axios.get(
+    `${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`
+  );
+  return res.data;
+};

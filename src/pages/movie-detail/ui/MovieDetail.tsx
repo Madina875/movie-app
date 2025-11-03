@@ -15,8 +15,13 @@ export const MovieDetail = memo(() => {
   return (
     <div>
       <MovieInfo id={id as string} />
-      <p className="container text-2xl my-10">similar movies</p>
-      <MovieList movies={data?.results?.slice(0, 4)} />
+      <div>
+        <p className="container mb-4 text-2xl font-light italic font-sans">
+          Similar Movies
+        </p>
+        <hr className="mb-7" />
+      </div>
+      <MovieList movies={data?.results?.slice(0, 8)} />
     </div>
   );
 });

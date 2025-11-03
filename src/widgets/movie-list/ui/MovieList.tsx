@@ -7,7 +7,7 @@ interface Props {
 
 export const MovieList: FC<Props> = memo(({ movies }) => {
   return (
-    <div className="mb-20 container grid lg:grid-cols-4 gap-4 md:grid-cols-3 grid-cols-2">
+    <div className="mb-20 container grid lg:grid-cols-4 gap-4 md:grid-cols-3  grid-cols-2">
       {movies && movies.length > 0 ? (
         movies
           .slice(0, 8)

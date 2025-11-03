@@ -26,8 +26,8 @@ const AppRouter = () => {
           path: "/movie/:id",
           element: <MovieDetail />,
           children: [
-            { index: true, element: <Reviews /> },
-            { path: "cast", element: <Cast /> },
+            { path: "review", element: <Reviews /> },
+            { index: true, element: <Cast /> },
             { path: "others", element: <Others /> },
           ],
         },

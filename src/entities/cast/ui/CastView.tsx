@@ -1,6 +1,6 @@
 import { memo, type FC } from "react";
 import { useCast } from "../model/useCast";
-import { createImageUrl } from "@/shared/utils";
+import { createImageAuthorUrl } from "@/shared/utils";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
@@ -16,7 +16,7 @@ export const CastView: FC<Props> = memo((props) => {
 
   return (
     <div className="container">
-      <div className="flex gap-[16px] overflow-x-auto">
+      <div className="flex gap-[16px] overflow-x-auto scrollbar-hide ">
         {data &&
           data[type]?.map((item: any) => (
             <div
@@ -25,8 +25,8 @@ export const CastView: FC<Props> = memo((props) => {
               key={item.id}
             >
               <img
-                src={createImageUrl(item.profile_path)}
-                className="w-full max-h-100 max-w-50 object-cover object-center rounded-xl"
+                src={createImageAuthorUrl(item.profile_path)}
+                className="h-60 w-40 object-cover object-center rounded-xl"
                 alt=""
               />
               <h3 className="font-medium">{item.original_name}</h3>
