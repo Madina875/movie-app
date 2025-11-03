@@ -11,7 +11,7 @@ export const Navigation = memo(() => {
   const cart = useSelector((state: RootState) => state.cart.value);
   const { t } = useTranslation();
   return (
-    <ul className="lg:flex hidden gap-6 text-[13px] whitespace-nowrap pr-90">
+    <ul className="md:flex hidden gap-6 text-[13px] whitespace-nowrap pl-[10%]">
       <li className="flex flex-col items-center">
         <NavLink
           to={"/"}

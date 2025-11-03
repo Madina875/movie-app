@@ -5,7 +5,7 @@ import logo from "@/shared/assets/LOGOTYPE – BILETICK.svg";
 export const Logo = memo(() => {
   return (
     <Link to={"/"}>
-      <img className="size-80" src={logo} alt="Logo" />
+      <img className=" size-23" src={logo} alt="Logo" />
     </Link>
   );
 });

@@ -66,10 +66,32 @@ body {
   display: none; /* for Chrome, Safari, Edge */
 }
 
+@media (max-width: 1024px) {
+  .mySwiper2 {
+    height: 500px;
+    max-width: 1000px;
+  }
+}
+
+/* Example for mobile devices */
+@media (max-width: 768px) {
+  .mySwiper2 {
+    height: 350px;
+    max-width: 100%;
+  }
+}
+
+/* Example for very small screens */
+@media (max-width: 480px) {
+  .mySwiper2 {
+    height: 250px;
+  }
+}
+
 .mySwiper {
   overflow: auto;
   height: 10%;
-  width: 1000px;
+  max-width: 1000px;
   box-sizing: border-box;
   padding: 10px 0;
 }
