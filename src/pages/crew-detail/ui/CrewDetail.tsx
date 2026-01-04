@@ -11,7 +11,7 @@ export const CrewDetail = memo(() => {
     <div>
       <CrewView />
       <h2 className="container text-3xl capitalize mb-10">
-        Played in movies like :
+        crew:
       </h2>
       <MovieList movies={movies?.cast} />
     </div>
