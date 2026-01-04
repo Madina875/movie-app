@@ -10,9 +10,7 @@ export const CrewDetail = memo(() => {
   return (
     <div>
       <CrewView />
-      <h2 className="container text-3xl capitalize mb-10">
-        crew:
-      </h2>
+      <h2 className="container text-3xl capitalize mb-10">movies:</h2>
       <MovieList movies={movies?.cast} />
     </div>
   );

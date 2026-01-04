@@ -114,7 +114,7 @@ export const MovieInfo: FC<Props> = memo((props) => {
 
       <div>
         <p className="container my-4 text-2xl font-light italic font-sans">
-          People played in this:
+          actors:
         </p>
         <hr className="mb-7" />
       </div>
